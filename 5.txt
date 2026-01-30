@@ -1,0 +1,92 @@
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~ (master)
+$ cd
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~ (master)
+$ cd desktop
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop (master)
+$ cd git_demo5
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5 (master)
+$ git clone https://github.com/vrs555/git5.git
+Cloning into 'git5'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+c
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5 (master)
+$ cd git5
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/VIGHNESH/Desktop/git_demo5/git5/.git/
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git tag v1.0
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git tag
+v1.0
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git tag -a v1.2 -m "initial tag"
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git tag
+v1.0
+v1.2
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git tag -l "v1.*"
+v1.0
+v1.2
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git push origin v1.0
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/vrs555/git5.git
+ * [new tag]         v1.0 -> v1.0
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git push origin --tags
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 155 bytes | 155.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/vrs555/git5.git
+ * [new tag]         v1.2 -> v1.2
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git tag -d v1.0
+Deleted tag 'v1.0' (was e4380b8)
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git tag -d v1.2
+Deleted tag 'v1.2' (was 1b59512)
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git push origin -d v1.2
+To https://github.com/vrs555/git5.git
+ - [deleted]         v1.2
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git push origin -d v1.0
+To https://github.com/vrs555/git5.git
+ - [deleted]         v1.0
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git log
+commit e4380b84cf30cf8007fbce3989650b33342c8384 (HEAD -> main, origin/main, origin/HEAD)
+Author: vrs555 <vrs09055@gmail.com>
+Date:   Fri Jan 30 06:58:14 2026 +0530
+
+    Initial commit
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$ git log --oneline
+e4380b8 (HEAD -> main, origin/main, origin/HEAD) Initial commit
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo5/git5 (main)
+$

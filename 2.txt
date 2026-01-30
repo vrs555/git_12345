@@ -1,0 +1,122 @@
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~ (master)
+$ cd
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~ (master)
+$ cd desktop
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop (master)
+$ cd git_demo2
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ git init
+Initialized empty Git repository in C:/Users/VIGHNESH/Desktop/git_demo2/.git/
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ echo "first line">file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ git commit -m "initial commit"
+[master (root-commit) f7c31b9] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ git branch feature-branch
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ git checkout feature-branch
+Switched to branch 'feature-branch'
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (feature-branch)
+$ echo "second line">file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (feature-branch)
+$ git status
+On branch feature-branch
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (feature-branch)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (feature-branch)
+$ git commit -m "modified in feature branch"
+[feature-branch fc68d2a] modified in feature branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (feature-branch)
+$ git checkout master
+Switched to branch 'master'
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ echo "third line">file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master|MERGING)
+$
+        modified:   file.txt
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master|MERGING)
+$  changes added to commit (use "git add" and/or "git commit -a")
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master|MERGING)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master|MERGING)
+$
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master|MERGING)
+$
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master|MERGING)
+$
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master|MERGING)
+$ nano file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master|MERGING)
+$ git add file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master|MERGING)
+$ git commit -m "merged"
+[master 7c4154f] merged
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ git log --oneline
+7c4154f (HEAD -> master) merged
+548ccf1 third commit
+fc68d2a (feature-branch) modified in feature branch
+f7c31b9 initial commit
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$ git branch -d feature-branch
+Deleted branch feature-branch (was fc68d2a).
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo2 (master)
+$

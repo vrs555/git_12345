@@ -1,0 +1,174 @@
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~ (master)
+$ cd
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~ (master)
+$ cd desktop
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop (master)
+$ cd git_demo4
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4 (master)
+$ git clone https://github.com/vrs555/git4.git
+Cloning into 'git4'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4 (master)
+$ cd git4
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/VIGHNESH/Desktop/git_demo4/git4/.git/
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ echo "first line">file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ cit commit -m "initial commit"
+bash: cit: command not found
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git commit -m "initial commit"
+[main 2fab843] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git branch feature-1
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git checkout feature-1
+Switched to branch 'feature-1'
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (feature-1)
+$ echo "this is second line">file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (feature-1)
+$ echo "this is seconf file">feature.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (feature-1)
+$ git status
+On branch feature-1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        feature.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (feature-1)
+$ git add .
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF the next time Git touches it
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (feature-1)
+$ git commit -m "second commit"
+[feature-1 8f47b2c] second commit
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 feature.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (feature-1)
+$ git push origin feature-1
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 594 bytes | 148.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'feature-1' on GitHub by visiting:
+remote:      https://github.com/vrs555/git4/pull/new/feature-1
+remote:
+To https://github.com/vrs555/git4.git
+ * [new branch]      feature-1 -> feature-1
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (feature-1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 880 bytes | 176.00 KiB/s, done.
+From https://github.com/vrs555/git4
+ * branch            main       -> FETCH_HEAD
+   93026aa..d844522  main       -> origin/main
+Updating 2fab843..d844522
+Fast-forward
+ feature.txt | 1 +
+ file.txt    | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 feature.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git branch -d feature-1
+Deleted branch feature-1 (was 8f47b2c).
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git push origin main --delete feature-1
+To https://github.com/vrs555/git4.git
+ - [deleted]         feature-1
+ ! [remote rejected] main (refusing to delete the current branch: refs/heads/main)
+error: failed to push some refs to 'https://github.com/vrs555/git4.git'
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git push origin --delete feature-1
+error: unable to delete 'feature-1': remote ref does not exist
+error: failed to push some refs to 'https://github.com/vrs555/git4.git'
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$ git log
+commit d844522b3d4dc92abbdff1f636f8fe5e74520210 (HEAD -> main, origin/main, origin/HEAD)
+Merge: 93026aa 8f47b2c
+Author: vrs555 <vrs09055@gmail.com>
+Date:   Fri Jan 30 06:55:23 2026 +0530
+
+    Merge pull request #1 from vrs555/feature-1
+
+    Feature 1
+
+commit 8f47b2c2288526d59a31c41a769cf7794f37891f
+Author: vrs555 <vrs09055@gmail.com>
+Date:   Fri Jan 30 06:54:44 2026 +0530
+
+    second commit
+
+commit 2fab8432f7fd0e83507c6eb6a501086dd5b3b2ce
+Author: vrs555 <vrs09055@gmail.com>
+Date:   Fri Jan 30 06:53:01 2026 +0530
+
+    initial commit
+
+commit 93026aa206eae5fa80c9d7855cc0d89815ab6b64
+Author: vrs555 <vrs09055@gmail.com>
+Date:   Fri Jan 30 06:51:50 2026 +0530
+
+    Initial commit
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo4/git4 (main)
+$

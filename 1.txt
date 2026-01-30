@@ -1,0 +1,116 @@
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~ (master)
+$ cd
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~ (master)
+$ cd desktop
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop (master)
+$ cd git_demo
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git init
+Initialized empty Git repository in C:/Users/VIGHNESH/Desktop/git_demo/.git/
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ ls
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ ls -a
+./  ../  .git/
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git config --global user.name "vrs555"
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git config --global user.email vrs09055@gmail.com
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ echo "hii">file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        file.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   file.txt
+
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git commit -m "initial commit"
+[master (root-commit) bcb47b3] initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ echo "this is second line">>file.txt
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git add file.txt
+warning: in the working copy of 'file.txt', LF will be replaced by CRLF the next time Git touches it
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   file.txt
+
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git commit -m "second commit"
+[master 0ed7f72] second commit
+ 1 file changed, 1 insertion(+)
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git log
+commit 0ed7f727130ead790636afccdd5417eafacc1920 (HEAD -> master)
+Author: vrs555 <vrs09055@gmail.com>
+Date:   Fri Jan 30 06:50:18 2026 +0530
+
+    second commit
+
+commit bcb47b38eb1cb7f52c681757e6c8cab00651537a
+Author: vrs555 <vrs09055@gmail.com>
+Date:   Fri Jan 30 06:49:22 2026 +0530
+
+    initial commit
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ git log --oneline
+0ed7f72 (HEAD -> master) second commit
+bcb47b3 initial commit
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$ gitk
+
+VIGHNESH@LAPTOP-HDH1P4UB MINGW64 ~/desktop/git_demo (master)
+$

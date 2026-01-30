@@ -1,0 +1,120 @@
+[6:45 pm, 29/01/2026] Vighnesh Reddy S: pipeline {
+    agent any // Specifies where the pipeline will run (any available agent)
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                // Add your build commands here, e.g., sh 'make build' or bat 'mvn compile'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Add your test commands here, e.g., sh 'make test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                // Add your deployment commands here
+            }
+        }
+    }
+}
+[6:45 pm, 29/01/2026] Vighnesh Reddy S: pipeline {
+    agent any // Specifies where the pipeline will run (any available agent)
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                // Add your build commands here, e.g., sh 'make build' or bat 'mvn compile'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Add your test commands here, e.g., sh 'make test'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                // Add your deployment commands here
+            }
+        }
+    }
+}
+Groovy code
+[6:45 pm, 29/01/2026] Vighnesh Reddy S: class SquareArea {
+    public static void main(String[] args) {
+        int side = 5;
+        int area = side * side;
+        System.out.println("Area = " + area);
+    }
+}
+[6:45 pm, 29/01/2026] Vighnesh Reddy S: class SimpleInterest {
+    public static void main(String[] args) {
+        int p = 1000, r = 5, t = 2;
+        int si = (p * r * t) / 100;
+        System.out.println("Simple Interest = " + si);
+    }
+}
+[6:45 pm, 29/01/2026] Vighnesh Reddy S: class PrimeNumber {
+    public static void main(String[] args) {
+        int n = 7;
+        int count = 0;
+
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0)
+                count++;
+        }
+
+        if (count == 2)
+            System.out.println("Prime Number");
+        else
+            System.out.println("Not Prime");
+    }
+}
+[6:45 pm, 29/01/2026] Vighnesh Reddy S: class AlternatePrime {
+    public static void main(String[] args) {
+        int flag = 1;
+
+        for (int n = 2; n <= 50; n++) {
+            int count = 0;
+
+            for (int i = 1; i <= n; i++) {
+                if (n % i == 0)
+                    count++;
+            }
+
+            if (count == 2) {
+                if (flag == 1) {
+                    System.out.print(n + " ");
+                    flag = 0;
+                } else {
+                    flag = 1;
+                }
+            }
+        }
+    }
+}
+[6:45 pm, 29/01/2026] Vighnesh Reddy S: class StringLength {
+    public static void main(String[] args) {
+        String s = "Hello";
+        System.out.println("Length = " + s.length());
+    }
+}
+[6:46 pm, 29/01/2026] Vighnesh Reddy S: class BankService {
+    public static void main(String[] args) {
+        int balance = 1000;
+        int deposit = 500;
+        int withdraw = 300;
+
+        balance = balance + deposit;
+        balance = balance - withdraw;
+
+        System.out.println("Balance = " + balance);
+    }
+}
